@@ -1,9 +1,24 @@
 
+---
+
 # 🌍 TravelMate – Your AI Travel Buddy
 
 > ✈️ **Plan smarter. Travel better.** Let AI handle your itinerary, destination picks, and weather — all in one sleek web app.
 
 ---
+<p align="center">
+  <a href="https://github.com/owsam22" target="_blank">
+    <img src="https://img.shields.io/badge/-GitHub-333?style=flat&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  &nbsp;
+  <a href="https://linkedin.com/in/samarpan22" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="https://instagram.com/owsam22" target="_blank">
+    <img src="https://img.shields.io/badge/-Instagram-E1306C?style=flat&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+</p>
 
 ## 🌐 Live Preview
 
@@ -14,26 +29,26 @@
 
 ## ✨ Key Features
 
-| 💡 Feature                           | 📝 Description                                                                  |
-| ------------------------------------ | ------------------------------------------------------------------------------- |
-| 🧠 **AI-Powered Travel Suggestions** | Get destinations tailored to your interests, group size, budget, and trip type. |
-| 📅 **Day-wise Itinerary Generator**  | Automatically generate detailed multi-day plans with things to do.              |
-| ☀️ **Weather Forecasting**           | Check the weather before locking your travel dates.                             |
-| 🖼️ **Stunning Visuals**             | Image previews for every destination — powered by Unsplash-like APIs.           |
-| 🔐 **Google Authentication**         | One-click login via Firebase for a smooth user experience.                      |
-| 💾 **Trip Saving** *(Coming Soon)*   | Save and manage your trips inside a personal dashboard.                         |
+| 💡 Feature                           | 📝 Description                                                                   |
+| ------------------------------------ | -------------------------------------------------------------------------------- |
+| 🧠 **AI-Powered Travel Suggestions** | Personalized destinations based on interests, group size, budget, and trip type. |
+| 📅 **Day-wise Itinerary Generator**  | Auto-generated multi-day plans with sights, activities, and tips.                |
+| ☀️ **Weather Forecasting**           | Live weather updates for smarter trip planning.                                  |
+| 🖼️ **Stunning Visuals**             | Beautiful destination images powered by Unsplash / Pexels.                       |
+| 🔐 **Google Authentication** *(Coming Sooon)*        | One-click login via Firebase for a smooth experience.                            |
+| 💾 **Trip Saving** *(Coming Soon)*   | Save and manage your trips inside a personal dashboard.                          |
 
 ---
 
 ## 🛠️ Tech Stack
 
-* 🧑‍💻 **Frontend:** HTML, CSS, JavaScript (Vanilla)
+* 🧑‍💻 **Frontend:** HTML, CSS, JavaScript
 * 🧠 **AI Backend:** OpenRouter API (DeepSeek, Mistral, etc.)
 * 🌦️ **Weather API:** OpenWeatherMap
 * 📸 **Image API:** Unsplash / Pexels
 * 🔐 **Authentication:** Firebase Auth
-* 💾 **Optional Database:** MongoDB (for saving trips)
-* 🚀 **Deployment:** Render / Vercel / Railway *(flexible based on use case)*
+* 💾 **Optional Database:** MongoDB (for saved trips)
+* 🚀 **Deployment:** Render / Vercel / Railway
 
 ---
 
@@ -45,7 +60,6 @@
 | `r.html`       | AI travel suggestion input form          |
 | `s.html`       | Smart travel recommendations display     |
 | `it.html`      | Full itinerary (day-wise) view           |
-| `weather.html` | Search live weather by destination       |
 
 ---
 
@@ -88,10 +102,23 @@
 
 ---
 
-## 🙋‍♂️ Questions or Suggestions?
+## 🙋‍♂️ Connect with Me
 
-Feel free to [open an issue](https://github.com/owsam22/travelmate/issues)
-📬 Or connect with me on Instagram: [@owsam22](https://instagram.com/owsam22)
+<p align="center">
+  <a href="https://github.com/owsam22" target="_blank">
+    <img src="https://img.shields.io/badge/-GitHub-333?style=flat&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  &nbsp;
+  <a href="https://linkedin.com/in/samarpan22" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="https://instagram.com/owsam22" target="_blank">
+    <img src="https://img.shields.io/badge/-Instagram-E1306C?style=flat&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+</p>
+
+> **💡 Follow me for more projects and updates!**
 
 ---
 
