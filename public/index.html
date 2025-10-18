@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TravelMate – Your AI Travel Companion</title>
+  <meta name="description"
+    content="TravelMate is your smart AI-powered travel planner. Discover destinations, craft personalized itineraries, and explore top picks with real-time weather and saved trip features.">
+
+  <!-- SEO Meta -->
+  <meta name="keywords"
+    content="AI travel planner, itinerary generator, travel destinations, trip planner, TravelMate, vacation planning, personalized trips, explore places, travel suggestions">
+  <meta name="author" content="TravelMate Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="TravelMate – Your AI Travel Companion">
+  <meta property="og:description"
+    content="Plan smarter trips with AI-generated itineraries, live weather, and curated destinations.">
+  <meta property="og:image"
+    content="https:/./images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:url" content="https://travelmate.glitch.me">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TravelMate – Your AI Travel Companion">
+  <meta name="twitter:description"
+    content="Plan smarter trips with AI-generated itineraries, live weather, and curated destinations.">
+  <meta name="twitter:image"
+    content="https:/./images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.svgrepo.com/show/452634/ai.svg">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
+
+  <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="#" style="text-decoration: none;"><i class="fa-solid fa-compass"></i>
+          <span class="gradient-text">TravelMate</span></a>
+
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Plan Your Next Trip with <span class="gradient-text">AI TravelMate</span></h2>
+    <p>Get personalized destinations and day-by-day itineraries in seconds — powered by AI, tailored just for you.</p>
+    <div class="hero-buttons">
+      <a href="#srh" id="btna" class="btn-primary"><i class="fas fa-search"></i> Plan My Trip</a>
+      <a href="#hlt" id="btnb" class="btn-secondary">Explore Suggestions</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="./images/main.png" alt="AI Travel Planning" />
+      <div class="ai-indicator">
+        <img src="./images/robo.png" alt="AI Assistant" />
+        <span id="srh">AI is planning your trip</span>
+      </div>
+    </div>
+  </section>
+
+<section id="search">
+  <h3 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">
+    Where do you want to go?
+  </h3>
+
+  <div class="search-bar">
+    <div class="input-group">
+      <input type="text" id="destination" placeholder="Search destinations like Ladakh, Iceland..." />
+      <input type="number" id="days" min="1" placeholder="No. of Days" title="Number of Days" />
+    </div>
+    <button id="dis" onclick="redirectToItinerary()"><i class="fas fa-search"></i>&nbsp;Plan Your Trip</button>
+  </div>
+
+  <!-- Not Sure Message -->
+<div class="not-sure-wrapper">
+  <div class="not-sure-toggle">Not sure where to go?</div>
+  <div class="not-sure-expand">
+    <a id="btnc" href="#hlt" class="not-sure-link">See Suggestions</a>
+    <a href="r.html" class="not-sure-link">Personalized Trip</a>
+  </div>
+</div>
+
+
+
+</section>
+
+
+  <section id="hlt" class="highlight">
+    <section id="recommendations">
+      <h3 style="text-align:center; font-size:2rem; margin-bottom:2rem;">Top Picks In India</h3>
+
+      <div class="cards" id="recommendation-cards"></div>
+
+
+      <div class="highlight-content">
+        <h2>Not Sure Where To Go?</h2>
+        <p>Let AI craft the perfect trip just for you!</p>
+        <a href="r.html" class="ai-btn"><i class="fas fa-search"></i>&nbsp;Explore Now</a>
+      </div>
+    </section>
+
+  </section>
+
+<section class="weather-section">
+  <div class="weather-image">
+    <div class="weather-form-overlay">
+      <h3>Get Weather Update</h3>
+      <form id="weatherForm">
+        <input type="text" id="weatherLocation" placeholder="Check weather of ..." required />
+        <button type="submit"><i class="fas fa-cloud-sun"></i> Check</button>
+      </form>
+      <div id="homeliveWeatherDisplay" class="homeweather-live-info"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="why-choose-section">
+  <div class="why-header">
+    <h2>Why Choose <span>TravelMate</span>?</h2>
+    <p>Let AI do the planning. You enjoy the journey.</p>
+  </div>
+
+  <div class="why-card-container">
+    <div class="why-card animate-on-scroll">
+      <img src="./images/beach.jpg" alt="Beach">
+      <h4>🎯 Personalized Trips</h4>
+      <p>AI curates plans just for you – fast, smart & fun.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <img src="./images/mountain.jpg" alt="Mountains">
+      <h4>🌦️ Smart Weather Sync</h4>
+      <p>Travel only when the skies are clear and perfect.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <img src="./images/city.jpg" alt="City">
+      <h4>🌍 Wide Destination Reach</h4>
+      <p>Explore top spots in India & beyond—seamlessly.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FEEDBACK SECTION -->
+
+<section class="feedback-invite">
+  <div class="feedback-content">
+    <div class="feedback-text">
+      <p>want to</p>
+      <h2><span>Share</span> your<br><span>Experiences</span> with the <span>World</span></h2>
+      <button id="openFeedbackFormBtn">Create Review →</button>
+    </div>
+    <div class="feedback-illustration">
+        <img src="./images/feedback-illustration.jpg" alt="Feedback Illustration" />
+    </div>
+  </div>
+</section>
+
+<!-- Feedback Modal Popup -->
+<div class="feedback-modal-overlay" id="feedbackModal">
+  <div class="feedback-modal">
+    <button class="close-btn" id="closeFeedbackFormBtn">✖</button>
+    <h3>Send Us Your Feedback</h3>
+    <form id="feedbackForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your feedback" rows="5" required></textarea>
+
+        <button id="submitBtn" type="submit">Submit</button>
+      </form>
+
+    <!-- Full-screen loader -->
+    <div id="loadingOverlay">
+      <div id="spinnerBox">
+        <div class="spinner" id="spinner"></div>
+        <div id="thankYouMsg" style="display: none;">✅ Thank you for your feedback!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="scroll-container">
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+    <div class="scroll-message">Back to Top</div>
+  </div>
+
+
+
+
+  <div id="inputWarning" style="display: none;" class="login-modal">
+    <div class="login-modal-content">
+      <p>Please fill in both destination and number of days.</p>
+      <div class="login-modal-buttons">
+        <button id="closeInputWarning">OK</button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer id="end" class="smart-footer">
+    <div class="footer-container">
+
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <a href="#" style="text-decoration: none;"><i class="fa-solid fa-compass"></i>
+          <span class="gradient-text">TravelMate</span></a>
+        <p class="animate-slide-in">AI-powered journeys made effortless.</p>
+      </div>
+
+      <!-- Grid Layout -->
+      <div class="footer-grid">
+
+        <!-- Quick Links -->
+        <div id="foot-links" class="footer-box animate-slide-in delay-1">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#srh">Search</a></li>
+            <li><a href="#hlt">AI Picks</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-box animate-slide-in delay-2">
+          <h4>Connect</h4>
+          <div class="social-icons-colorful">
+            <a href="https://github.com/owsam22"><i class="bx bxl-github"></i></a>
+            <a href="https://instagram.com/owsam22"><i class="bx bxl-instagram"></i></a>
+            <a href="https://twitter.com/owsam22"><i class="bx bxl-twitter"></i></a>
+            <a href="https://linkedin.com/in/samarpan22"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://youtube.com/@samarpan.22"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+
+
+        <!-- AI Travel Assistant -->
+        <div id="foot-animation" class="footer-box animate-float delay-3 ai-bot">
+          <img src="./images/robo.png" alt="AI Assistant" />
+          <p>Planning your next smart trip...</p>
+        </div>
+
+      </div>
+
+      <!-- Footer Copy -->
+      <div class="footer-copy animate-fade-in delay-4">
+        <p>© 2025 TravelMate. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+  
+
+  <script type="module">
+
+    function redirectToItinerary() {
+
+        const inputs = document.querySelectorAll(".input-group input");
+        const destination = encodeURIComponent(inputs[0].value.trim());
+        const days = encodeURIComponent(inputs[1].value.trim());
+
+        if (!destination || !days) {
+          const warning = document.getElementById("inputWarning");
+          warning.style.display = "flex";
+
+          document.getElementById("closeInputWarning").onclick = () => {
+            warning.style.display = "none";
+          };
+
+          return;
+        }
+
+
+        window.location.href = `it.html?destination=${destination}&days=${days}`;
+      
+    }
+
+    window.redirectToItinerary = redirectToItinerary;
+
+
+
+    function createCardItinerary(destination) {
+
+        const days = 'as recommended';
+
+        // Encode and redirect
+        const encodedDestination = encodeURIComponent(destination);
+        window.location.href = `it.html?destination=${encodedDestination}&days=${days}`;
+      
+    }
+    window.createCardItinerary = createCardItinerary;
+
+  </script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
